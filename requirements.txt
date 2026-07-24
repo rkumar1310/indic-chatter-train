@@ -1,0 +1,32 @@
+# chatterbox-indic-train — training requirements
+#
+# IMPORTANT: Install PyTorch FIRST, matched to your GPU, before anything else:
+#
+#   Blackwell / 50-series (cu128):
+#     pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu128
+#
+#   Ampere/Ada (30xx/40xx, A100, cu124):
+#     pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu124
+#
+#   CPU only:
+#     pip install torch torchaudio
+#
+# Then install the Chatterbox Indic fork (provides the `chatterbox` package
+# these scripts import from — S3Tokenizer, MTLTokenizer, T3, S3Gen, etc.):
+#
+#   pip install git+https://github.com/reenigne314/chatterbox-indic.git
+#
+# Then the rest of this file:
+#
+#   pip install -r requirements.txt
+
+peft>=0.10.0
+datasets>=2.18.0
+soundfile
+librosa==0.11.0
+tqdm
+huggingface_hub>=0.20.0
+safetensors>=0.4.0
+
+# optional — training run tracking (train_t3_lora.py --use_wandb)
+wandb

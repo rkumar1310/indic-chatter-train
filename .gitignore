@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.DS_Store
+
+# Downloaded/processed data and trained checkpoints — large, reproducible from source
+data/
+checkpoints/
+conds/
+*.pt
+*.wav
+*.log
+
+# env
+.env
+.venv/
+venv/
