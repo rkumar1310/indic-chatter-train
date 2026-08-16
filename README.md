@@ -1,5 +1,7 @@
 # chatterbox-indic-train
 
+![Atoms of AI](./atoms2.png)
+
 Training scripts for adding Indian languages to [Chatterbox-Multilingual](https://github.com/resemble-ai/chatterbox) via tokenizer extension + LoRA — no phoneme engineering, no G2P, no retraining from scratch.
 
 This is the training-side companion to [chatterbox-indic](https://github.com/reenigne314/chatterbox-indic) (the inference fork) and [chatterbox-indic-lora](https://huggingface.co/reenigne314/chatterbox-indic-lora) (the trained weights on HuggingFace). Those two let you *use* the result. This repo is how it was *made* — download the data, extend the vocabulary, warm-start the embeddings, fine-tune with LoRA, all from source.
